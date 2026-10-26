@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-04 contextforge schematic</title>
+<title>PN-03 contextforge schematic</title>
 <desc>Blueprint of contextforge: ingestion of Markdown, PDF and URL into section-aware chunks, embeddings and a vector store; the ask path embeds the query, searches top-k, checks a 0.215 confidence threshold, generates a cited answer, checks citations, and otherwise abstains to an admin queue.</desc>
 <defs>
 <pattern id="gm" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
@@ -22,7 +22,7 @@ text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:9px
 <rect width="640" height="360" fill="url(#gM)"/>
 
 <rect x="16" y="16" width="608" height="20" class="b" fill-opacity="0"/>
-<text x="24" y="30" style="font-size:10px">PN-04 · CONTEXTFORGE · CITED DOCS ANSWER BOT</text>
+<text x="24" y="30" style="font-size:10px">PN-03 · CONTEXTFORGE · CITED DOCS ANSWER BOT</text>
 <text x="616" y="30" class="s" style="text-anchor:end">RAG · ABSTAINS WHEN UNSURE</text>
 
 <text x="16" y="58" class="s">Ingestion</text>

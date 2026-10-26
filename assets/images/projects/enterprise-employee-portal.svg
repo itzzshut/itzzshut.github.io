@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img">
-<title>PN-06 · Enterprise Employee Portal · System schematic</title>
+<title>PN-05 · Enterprise Employee Portal · System schematic</title>
 <desc>Four roles use an Angular 18 SPA served by nginx. It calls an Express API on Node.js 22 with a middleware pipeline and domain services. The API stores data in MySQL 8.0 and object storage. A Jenkins pipeline with SonarQube and Newman gates deploys the system.</desc>
 <defs>
 <pattern id="gm" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
@@ -23,7 +23,7 @@
 <rect width="640" height="360" fill="url(#gM)"/>
 
 <rect class="c" x="16" y="16" width="608" height="20"/>
-<text class="t" x="24" y="30" style="font-size:10px">PN-06 · ENTERPRISE EMPLOYEE PORTAL · HR SELF-SERVICE SYSTEM SCHEMATIC</text>
+<text class="t" x="24" y="30" style="font-size:10px">PN-05 · ENTERPRISE EMPLOYEE PORTAL · HR SELF-SERVICE SYSTEM SCHEMATIC</text>
 
 <!-- actors -->
 <rect class="c" x="16" y="56" width="96" height="150"/>

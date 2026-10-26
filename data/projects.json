@@ -61,32 +61,6 @@
       }
     },
     {
-      "name": "SCM Supply Chain RAG Assistant",
-      "category": "AI / RAG chatbot",
-      "description": "A retrieval-augmented chatbot built in Flowise that answers questions about a supplier network from supplier performance data and a supply chain governance policy.",
-      "highlights": [
-        "Indexes 2,000 purchase orders across 116 suppliers with 27 attributes each",
-        "Gemini 2.5 Flash answers over Pinecone retrieval with Gemini embeddings",
-        "Compared chunking setups; selected 1000-character chunks for the final build"
-      ],
-      "technologies": [
-        "Flowise",
-        "Google Gemini",
-        "Pinecone",
-        "RAG"
-      ],
-      "links": {
-        "source": "https://github.com/itzzshut/scm-assistant-bot"
-      },
-      "image": "assets/images/projects/scm-assistant-bot.svg",
-      "featured": true,
-      "hero": {
-        "src": "assets/images/projects/scm-assistant-bot-hero.jpg",
-        "alt": "SCM Supply Chain RAG Assistant — Concept render",
-        "caption": "Concept render"
-      }
-    },
-    {
       "name": "contextforge",
       "category": "AI developer tool",
       "description": "A self-hostable docs answer bot that answers only from your own docs, cites its sources and abstains when retrieval confidence is too low, logging the question to an admin queue.",

@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-labelledby="ttl dsc">
-<title id="ttl">PN-05 pulseboard-ops architecture</title>
+<title id="ttl">PN-04 pulseboard-ops architecture</title>
 <desc id="dsc">Stripe, GitHub, generic JSON webhooks and a custom SDK pass through signature verification and a Redis rate limiter into a MongoDB rule engine (pattern, threshold, spike). Events and alerts go to a Socket.IO multi-tenant React dashboard, and alerts go to Slack and email.</desc>
 <defs>
 <pattern id="gm" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
@@ -23,7 +23,7 @@
 <rect width="640" height="360" fill="url(#gM)"/>
 
 <rect x="16" y="16" width="608" height="20" fill="none" stroke="#EAF3FB" stroke-opacity="0.8"/>
-<text class="t h" x="24" y="30">PN-05 · PULSEBOARD-OPS · WEBHOOK INCIDENT RADAR</text>
+<text class="t h" x="24" y="30">PN-04 · PULSEBOARD-OPS · WEBHOOK INCIDENT RADAR</text>
 <text class="t s" x="616" y="30" text-anchor="end">SHEET 1/1</text>
 
 <text class="t s" x="16" y="60">EXTERNAL</text>

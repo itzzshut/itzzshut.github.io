@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
-<title>PN-08 resumable: SSE resume flow</title>
+<title>PN-07 resumable: SSE resume flow</title>
 <desc>An event source publishes into a bounded ReplayBuffer. A client reconnects with Last-Event-ID into resume(), which returns FRESH or RESUMED events, or a GAP with a missed count and snapshot. StreamClient.apply tracks the result. Readouts: 24,540 events, 1,000 reconnects, 0 lost.</desc>
 <defs>
 <pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
@@ -21,7 +21,7 @@ text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;letter-spacin
 <rect width="640" height="360" fill="url(#mj)"/>
 
 <rect x="16" y="16" width="608" height="20" class="b"/>
-<text x="24" y="30" font-size="10" style="font-size:10px">PN-08 · RESUMABLE · SSE LAST-EVENT-ID RESUME</text>
+<text x="24" y="30" font-size="10" style="font-size:10px">PN-07 · RESUMABLE · SSE LAST-EVENT-ID RESUME</text>
 <text x="616" y="30" style="font-size:9px;text-anchor:end;fill-opacity:0.7">SCHEMATIC</text>
 
 <rect x="16" y="56" width="120" height="48" class="b"/>

@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-09 tokenforge schematic</title>
+<desc>One token JSON is validated by Zod, then built into a Tailwind theme, CSS custom properties and a typed TS module. A WCAG contrast check passes or fails CI. A diff command compares two token documents and produces a drift report.</desc>
+<defs>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+<marker id="aw" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<style>
+text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;letter-spacing:0.06em;text-transform:uppercase;fill:#EAF3FB}
+.t{font-size:10px;text-anchor:middle}
+.s{font-size:9px;text-anchor:middle;fill-opacity:0.7}
+.b{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.k{fill:none;stroke:#9FDBFF;stroke-width:1}
+.n{font-size:11px;text-anchor:middle;fill:#9FDBFF;font-weight:bold}
+.l{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+</style>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#mn)"/>
+<rect width="640" height="360" fill="url(#mj)"/>
+
+<rect x="16" y="16" width="608" height="20" class="b"/>
+<text x="24" y="30" style="font-size:10px">PN-09 · TOKENFORGE · DESIGN TOKEN PIPELINE</text>
+<text x="616" y="30" style="font-size:9px;text-anchor:end;fill-opacity:0.7">SCHEMATIC</text>
+
+<!-- source -->
+<rect x="16" y="140" width="104" height="60" class="k"/>
+<text x="68" y="166" class="t">tokens.json</text>
+<text x="68" y="180" class="s">colors/spacing</text>
+<text x="68" y="191" class="s">typography</text>
+
+<!-- zod -->
+<rect x="144" y="140" width="100" height="60" class="k"/>
+<text x="194" y="167" class="t">Zod validate</text>
+<text x="194" y="182" class="s">schema + refs</text>
+
+<!-- build -->
+<rect x="284" y="91" width="110" height="48" class="k"/>
+<text x="339" y="112" class="t">Transform</text>
+<text x="339" y="126" class="s">tokenforge build</text>
+
+<!-- outputs -->
+<rect x="450" y="54" width="174" height="34" class="b"/>
+<text x="537" y="68" class="t">Tailwind theme</text>
+<text x="537" y="81" class="s">var(--tf-color-*)</text>
+<rect x="450" y="98" width="174" height="34" class="b"/>
+<text x="537" y="112" class="t">CSS custom props</text>
+<text x="537" y="125" class="s">light/dark/hi-contrast</text>
+<rect x="450" y="142" width="174" height="34" class="b"/>
+<text x="537" y="156" class="t">Typed TS module</text>
+<text x="537" y="169" class="s">as const + resolveColor</text>
+
+<!-- contrast gate -->
+<text x="284" y="194" class="s">Gate</text>
+<rect x="284" y="200" width="110" height="48" class="k"/>
+<text x="339" y="221" class="t">Contrast check</text>
+<text x="339" y="235" class="s">WCAG 2.x pairs</text>
+<rect x="450" y="200" width="174" height="32" class="b"/>
+<text x="537" y="213" class="t">CI green</text>
+<text x="537" y="225" class="s">AA / AAA pass</text>
+<rect x="450" y="244" width="174" height="32" class="b"/>
+<text x="537" y="257" class="t">CI fails</text>
+<text x="537" y="269" class="s">pair breaks AA · exit ≠ 0</text>
+
+<!-- diff row -->
+<rect x="144" y="288" width="116" height="44" class="b"/>
+<text x="202" y="307" class="t">Second token doc</text>
+<text x="202" y="321" class="s">mobile snapshot</text>
+<rect x="300" y="288" width="140" height="44" class="k"/>
+<text x="370" y="307" class="t">Drift report</text>
+<text x="370" y="321" class="s">added/removed/changed</text>
+
+<!-- arrows -->
+<path d="M120 170H144" class="k" marker-end="url(#ah)"/>
+<path d="M244 170H264V115H284" class="k" marker-end="url(#ah)"/>
+<path d="M394 115H450" class="k" marker-end="url(#ah)"/>
+<path d="M422 115V71H450" class="k" marker-end="url(#ah)"/>
+<path d="M422 115V159H450" class="k" marker-end="url(#ah)"/>
+<path d="M194 200V224H284" class="k" marker-end="url(#ah)"/>
+<path d="M394 224H422V216H450" class="l" marker-end="url(#aw)"/>
+<path d="M422 224V260H450" class="l" marker-end="url(#aw)"/>
+<path d="M68 200V310H144" class="l" stroke-dasharray="4 3" marker-end="url(#aw)"/>
+<path d="M260 310H300" class="l" marker-end="url(#aw)"/>
+<text x="76" y="262" style="font-size:9px;fill-opacity:0.7">tokenforge diff</text>
+
+<!-- readouts -->
+<rect x="470" y="288" width="46" height="44" class="b"/>
+<text x="493" y="307" class="n">104</text>
+<text x="493" y="322" class="s">tests</text>
+<rect x="524" y="288" width="46" height="44" class="b"/>
+<text x="547" y="307" class="n">3</text>
+<text x="547" y="322" class="s">modes</text>
+<rect x="578" y="288" width="46" height="44" class="b"/>
+<text x="601" y="307" class="n">1</text>
+<text x="601" y="322" class="s">dep</text>
+</svg>

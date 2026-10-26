@@ -1,0 +1,89 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-01 · AI Career Coach (sensai) system schematic</title>
+<desc>Blueprint of a Next.js app with Clerk auth, server actions using Prisma and a SQL database, Inngest background jobs, and Google Gemini producing career advice, resume suggestions and interview prep.</desc>
+<defs>
+<style>
+.t{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:11px;letter-spacing:0.02em;fill:#EAF3FB;text-transform:uppercase}
+.h{font-size:10px}
+.s{opacity:0.7}
+.a{fill:#9FDBFF}
+.b{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+.k{fill:none;stroke:#9FDBFF;stroke-width:1}
+.l{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+</style>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="m" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<marker id="mk" markerWidth="6" markerHeight="6" refX="5" refY="3" orient="auto"><path d="M0 0L6 3L0 6Z" fill="#9FDBFF"/></marker>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#mn)"/>
+<rect width="640" height="360" fill="url(#mj)"/>
+
+<rect x="16" y="16" width="608" height="22" class="b"/>
+<text x="24" y="30" class="t h">PN-01 · AI CAREER COACH · SENSAI SYSTEM SCHEMATIC</text>
+
+<rect x="16" y="56" width="88" height="60" class="b"/>
+<text x="60" y="83" class="t" text-anchor="middle">USER</text>
+<text x="60" y="97" class="t s" text-anchor="middle">BROWSER</text>
+
+<rect x="16" y="140" width="88" height="60" class="b"/>
+<text x="60" y="167" class="t" text-anchor="middle">CLERK</text>
+<text x="60" y="181" class="t s" text-anchor="middle">AUTH</text>
+
+<rect x="144" y="56" width="136" height="130" class="k"/>
+<text x="152" y="74" class="t a">NEXT.JS APP</text>
+<line x1="144" y1="82" x2="280" y2="82" class="l" stroke-opacity="0.4"/>
+<text x="152" y="102" class="t s">/ONBOARDING</text>
+<text x="152" y="118" class="t s">/DASHBOARD</text>
+<text x="152" y="134" class="t s">/RESUME</text>
+<text x="152" y="150" class="t s">/INTERVIEW</text>
+<text x="152" y="174" class="t s">CLERK MIDDLEWARE</text>
+
+<rect x="328" y="56" width="136" height="60" class="k"/>
+<text x="396" y="83" class="t a" text-anchor="middle">SERVER ACTIONS</text>
+<text x="396" y="97" class="t s" text-anchor="middle">NODE.JS</text>
+
+<rect x="360" y="140" width="104" height="44" class="b"/>
+<text x="412" y="159" class="t" text-anchor="middle">INNGEST</text>
+<text x="412" y="173" class="t s" text-anchor="middle">BG JOBS</text>
+
+<rect x="328" y="244" width="136" height="46" class="b"/>
+<text x="396" y="264" class="t" text-anchor="middle">PRISMA ORM</text>
+<text x="396" y="278" class="t s" text-anchor="middle">DATA ACCESS</text>
+
+<path d="M512 246V286A48 8 0 0 0 608 286V246" class="b"/>
+<ellipse cx="560" cy="246" rx="48" ry="8" class="b"/>
+<text x="560" y="272" class="t" text-anchor="middle">SQL DB</text>
+
+<rect x="496" y="56" width="128" height="120" class="k"/>
+<text x="504" y="74" class="t a">GOOGLE GEMINI</text>
+<line x1="496" y1="82" x2="624" y2="82" class="l" stroke-opacity="0.4"/>
+<text x="504" y="104" class="t">CAREER ADVICE</text>
+<text x="504" y="124" class="t">RESUME SUGGESTIONS</text>
+<text x="504" y="144" class="t">INTERVIEW PREP</text>
+<text x="504" y="165" class="t s">GEMINI API KEY</text>
+
+<line x1="104" y1="86" x2="144" y2="86" class="k" marker-end="url(#mk)"/>
+<line x1="280" y1="86" x2="328" y2="86" class="k" marker-end="url(#mk)"/>
+<line x1="464" y1="86" x2="496" y2="86" class="k" marker-end="url(#mk)"/>
+<line x1="60" y1="116" x2="60" y2="140" class="l" marker-end="url(#m)"/>
+<text x="68" y="131" class="t s">SIGN-IN</text>
+<line x1="104" y1="170" x2="144" y2="170" class="l" marker-end="url(#m)"/>
+<line x1="340" y1="116" x2="340" y2="244" class="l" marker-end="url(#m)"/>
+<line x1="412" y1="116" x2="412" y2="140" class="l" marker-end="url(#m)"/>
+<line x1="464" y1="162" x2="496" y2="162" class="l" marker-end="url(#m)"/>
+<line x1="440" y1="184" x2="440" y2="244" class="l" marker-end="url(#m)"/>
+<line x1="464" y1="267" x2="512" y2="267" class="l" marker-end="url(#m)"/>
+
+<rect x="16" y="244" width="112" height="40" class="b"/>
+<text x="24" y="260" class="t a h">8</text>
+<text x="24" y="275" class="t s">ENV VARS</text>
+<rect x="144" y="244" width="112" height="40" class="b"/>
+<text x="152" y="260" class="t a h">3</text>
+<text x="152" y="275" class="t s">AI OUTPUTS</text>
+
+<line x1="16" y1="318" x2="48" y2="318" class="k" marker-end="url(#mk)"/>
+<text x="58" y="321" class="t s">KEY PATH</text>
+<text x="624" y="338" class="t s" text-anchor="end">SHEET 1/1 · NTS</text>
+</svg>

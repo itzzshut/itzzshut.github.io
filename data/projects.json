@@ -1,0 +1,253 @@
+{
+  "projects": [
+    {
+      "name": "AI Career Coach (sensai)",
+      "category": "AI web app",
+      "description": "A full-stack AI-powered career guidance platform built with Next.js and Node.js that gives users personalised career advice, resume suggestions, interview prep and role-specific insights.",
+      "highlights": [
+        "Authentication with Clerk and database operations through Prisma ORM",
+        "Google Gemini API integration for AI-driven career advice",
+        "Background workflows handled with Inngest"
+      ],
+      "technologies": [
+        "Next.js",
+        "Node.js",
+        "Prisma",
+        "Clerk",
+        "Inngest",
+        "Google Gemini API"
+      ],
+      "links": {
+        "source": "https://github.com/itzzshut/sensai",
+        "demo": "https://sensai-liart.vercel.app"
+      },
+      "image": "assets/images/projects/sensai.svg",
+      "featured": true,
+      "hero": {
+        "src": "assets/images/projects/sensai-hero.jpg",
+        "alt": "AI Career Coach (sensai) — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "E-Commerce Store",
+      "category": "Full-stack web app",
+      "description": "A full-stack MERN e-commerce platform with product and category management, a shopping cart, coupon codes, Stripe checkout and an admin dashboard with sales analytics.",
+      "highlights": [
+        "REST APIs on Node.js/Express and MongoDB, secured with JWT access and refresh tokens",
+        "Performance optimised with Redis caching; media managed with Cloudinary",
+        "Payments integrated via Stripe; state managed with Zustand"
+      ],
+      "technologies": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Redis",
+        "Stripe",
+        "Cloudinary",
+        "Zustand"
+      ],
+      "links": {
+        "source": "https://github.com/itzzshut/Ecommerce",
+        "demo": "https://ecommerce-topaz-zeta.vercel.app"
+      },
+      "image": "assets/images/projects/ecommerce.svg",
+      "featured": true,
+      "hero": {
+        "src": "assets/images/projects/ecommerce-hero.jpg",
+        "alt": "E-Commerce Store — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "SCM Supply Chain RAG Assistant",
+      "category": "AI / RAG chatbot",
+      "description": "A retrieval-augmented chatbot built in Flowise that answers questions about a supplier network from supplier performance data and a supply chain governance policy.",
+      "highlights": [
+        "Indexes 2,000 purchase orders across 116 suppliers with 27 attributes each",
+        "Gemini 2.5 Flash answers over Pinecone retrieval with Gemini embeddings",
+        "Compared chunking setups; selected 1000-character chunks for the final build"
+      ],
+      "technologies": [
+        "Flowise",
+        "Google Gemini",
+        "Pinecone",
+        "RAG"
+      ],
+      "links": {
+        "source": "https://github.com/itzzshut/scm-assistant-bot"
+      },
+      "image": "assets/images/projects/scm-assistant-bot.svg",
+      "featured": true,
+      "hero": {
+        "src": "assets/images/projects/scm-assistant-bot-hero.jpg",
+        "alt": "SCM Supply Chain RAG Assistant — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "contextforge",
+      "category": "AI developer tool",
+      "description": "A self-hostable docs answer bot that answers only from your own docs, cites its sources and abstains when retrieval confidence is too low, logging the question to an admin queue.",
+      "highlights": [
+        "Hallucination guard abstains when an answer cites a chunk that was never retrieved",
+        "Offline eval harness with a 30-case golden dataset for accuracy and hallucination rate",
+        "Embeddable one-script widget plus streaming chat API"
+      ],
+      "technologies": [
+        "TypeScript",
+        "Node.js",
+        "PostgreSQL",
+        "pgvector",
+        "Drizzle ORM",
+        "Vercel AI SDK",
+        "Vitest"
+      ],
+      "links": {
+        "source": "https://github.com/itzzshut/contextforge"
+      },
+      "image": "assets/images/projects/contextforge.svg",
+      "hero": {
+        "src": "assets/images/projects/contextforge-hero.jpg",
+        "alt": "contextforge — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "pulseboard-ops",
+      "category": "Monitoring platform",
+      "description": "A lightweight, self-hosted incident radar that ingests Stripe, GitHub and custom events, evaluates them against rules and pushes alerts to a live dashboard, Slack and email.",
+      "highlights": [
+        "Three signature-verified ingestion paths plus a custom event SDK",
+        "Rule engine with pattern, threshold and spike conditions and cooldowns",
+        "Redis-backed per-key rate limiting and role-based multi-tenant auth"
+      ],
+      "technologies": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Redis",
+        "React",
+        "Socket.IO",
+        "Docker"
+      ],
+      "links": {
+        "source": "https://github.com/itzzshut/pulseboard-ops"
+      },
+      "image": "assets/images/projects/pulseboard-ops.svg",
+      "hero": {
+        "src": "assets/images/projects/pulseboard-ops-hero.jpg",
+        "alt": "pulseboard-ops — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "Enterprise Employee Portal",
+      "category": "Enterprise web app",
+      "description": "An HR self-service portal for leave, timesheets, documents and the org chart, with two-stage leave approval enforced in the API and a CI/CD pipeline gated on API contract tests.",
+      "highlights": [
+        "JWT sessions with 15-minute access tokens and rotating 7-day refresh tokens",
+        "Four roles with route-level and row-level permission checks",
+        "MySQL schema of 15 tables; org chart resolved by a recursive CTE"
+      ],
+      "technologies": [
+        "Angular 18",
+        "TypeScript",
+        "Node.js",
+        "Express",
+        "MySQL",
+        "Jenkins",
+        "Newman",
+        "nginx"
+      ],
+      "links": {
+        "source": "https://github.com/itzzshut/enterprise-employee-portal"
+      },
+      "image": "assets/images/projects/enterprise-employee-portal.svg",
+      "hero": {
+        "src": "assets/images/projects/enterprise-employee-portal-hero.jpg",
+        "alt": "Enterprise Employee Portal — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "traceboard",
+      "category": "Quality tooling",
+      "description": "A requirements traceability tool that links requirements, tests, code and defects, and flags stale coverage where a test still passes against a requirement that has since changed.",
+      "highlights": [
+        "Four coverage states: covered, stale-covered, failing and uncovered",
+        "Demo exposes the gap between 57% reported and 29% true coverage",
+        "Immutable requirement versions and Markdown audit packs"
+      ],
+      "technologies": [
+        "TypeScript",
+        "Node.js",
+        "SQLite",
+        "GitHub Actions"
+      ],
+      "links": {
+        "source": "https://github.com/itzzshut/traceboard",
+        "demo": "https://itzzshut.github.io/traceboard/"
+      },
+      "image": "assets/images/projects/traceboard.svg",
+      "hero": {
+        "src": "assets/images/projects/traceboard-hero.jpg",
+        "alt": "traceboard — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "resumable",
+      "category": "Real-time infrastructure",
+      "description": "Server-sent events with a real Last-Event-ID contract over a bounded replay buffer and an explicit gap signal, so reconnecting clients never silently skip events.",
+      "highlights": [
+        "Delivered all 24,540 events with 0 lost across 1,000 simulated reconnects",
+        "Explicit GAP outcome reports missed events and a snapshot to rebase on",
+        "Suite of 20 tests covering ordering, duplicates and off-by-one edges"
+      ],
+      "technologies": [
+        "TypeScript",
+        "Node.js",
+        "Server-Sent Events",
+        "GitHub Pages"
+      ],
+      "links": {
+        "source": "https://github.com/itzzshut/resumable",
+        "demo": "https://itzzshut.github.io/resumable/"
+      },
+      "image": "assets/images/projects/resumable.svg",
+      "hero": {
+        "src": "assets/images/projects/resumable-hero.jpg",
+        "alt": "resumable — Concept render",
+        "caption": "Concept render"
+      }
+    },
+    {
+      "name": "tokenforge",
+      "category": "Developer tools",
+      "description": "One design-token JSON source forged into a Tailwind theme, CSS variables for light, dark and high-contrast modes, and a typed TypeScript module, with a WCAG contrast gate for CI.",
+      "highlights": [
+        "Contrast check exits non-zero when a declared pair misses its WCAG level",
+        "Drift detector reports added, removed and changed token values",
+        "Covered by a Vitest suite of 104 tests"
+      ],
+      "technologies": [
+        "TypeScript",
+        "Tailwind",
+        "CSS",
+        "Zod",
+        "Vitest"
+      ],
+      "links": {
+        "source": "https://github.com/itzzshut/tokenforge"
+      },
+      "image": "assets/images/projects/tokenforge.svg",
+      "hero": {
+        "src": "assets/images/projects/tokenforge-hero.jpg",
+        "alt": "tokenforge — Concept render",
+        "caption": "Concept render"
+      }
+    }
+  ]
+}

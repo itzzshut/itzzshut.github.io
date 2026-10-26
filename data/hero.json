@@ -1,0 +1,42 @@
+{
+  "name": "Mariam Malik",
+  "title": "Software Engineer — Full-Stack Developer",
+  "summary": "I build full-stack web applications end to end, from database models and APIs to React interfaces. As a Software Engineer Intern at Louisa AI I worked on a release automation platform, shipping its GitHub integration, workflow APIs and Slack notifications on a type-safe React, Hono and Bun stack. I enjoy turning messy workflows into reliable, well-typed products.",
+  "readouts": [
+    {
+      "value": "800+",
+      "label": "DSA problems solved across platforms"
+    },
+    {
+      "value": "6th",
+      "label": "state rank in Class 12"
+    },
+    {
+      "value": "98.6%",
+      "label": "Class 12 score, JKBOSE"
+    }
+  ],
+  "ctas": [
+    {
+      "label": "View projects",
+      "href": "#projects",
+      "kind": "primary"
+    },
+    {
+      "label": "Resume",
+      "href": "assets/files/mariam-malik-resume.pdf",
+      "kind": "resume"
+    },
+    {
+      "label": "Get in touch",
+      "href": "#contact",
+      "kind": "secondary"
+    }
+  ],
+  "social": {
+    "github": "https://github.com/itzzshut",
+    "linkedin": "https://www.linkedin.com/in/mariam-malik-308698259/",
+    "email": "mariammalik5100@gmail.com",
+    "phone": "+91 6005940145"
+  }
+}

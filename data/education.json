@@ -1,0 +1,26 @@
+{
+  "entries": [
+    {
+      "institution": "Jadavpur University",
+      "degree": "B.E.",
+      "field": "Computer Science and Engineering",
+      "end": "May 2026",
+      "location": "Kolkata, India",
+      "details": [
+        "GPA: 7.7/10",
+        "Relevant coursework: Data Structures, OOP, OS, DBMS",
+        "CodeClub member and GFM Coordinator"
+      ]
+    },
+    {
+      "institution": "Happy Model School, Udhampur",
+      "degree": "12th Class JKBOSE",
+      "end": "April 2022",
+      "location": "Jammu and Kashmir, India",
+      "details": [
+        "Scored 98.6%",
+        "Secured 6th rank in Class 12 (State)"
+      ]
+    }
+  ]
+}

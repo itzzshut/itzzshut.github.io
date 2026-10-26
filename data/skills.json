@@ -1,0 +1,66 @@
+{
+  "groups": [
+    {
+      "name": "Languages",
+      "items": [
+        "JavaScript",
+        "SQL",
+        "C++",
+        "Java (basics)",
+        "HTML/CSS"
+      ]
+    },
+    {
+      "name": "Frameworks & Runtimes",
+      "items": [
+        "React",
+        "Next.js",
+        "Node.js",
+        "Express",
+        "Bun",
+        "Hono",
+        "Tailwind",
+        "ShadCN"
+      ]
+    },
+    {
+      "name": "Databases",
+      "items": [
+        "MongoDB",
+        "PostgreSQL",
+        "Redis"
+      ]
+    },
+    {
+      "name": "Tools & Platforms",
+      "items": [
+        "Git",
+        "GitHub",
+        "Vercel",
+        "Postman",
+        "Clerk",
+        "Prisma"
+      ]
+    },
+    {
+      "name": "Also used professionally",
+      "items": [
+        "React Flow",
+        "TanStack",
+        "Drizzle ORM",
+        "oRPC",
+        "Slack integrations"
+      ]
+    },
+    {
+      "name": "Soft Skills",
+      "items": [
+        "Teamwork",
+        "Communication",
+        "Problem Solving",
+        "Time Management",
+        "Critical Thinking"
+      ]
+    }
+  ]
+}

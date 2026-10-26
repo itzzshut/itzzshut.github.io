@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+  <title>PN-07 traceboard architecture</title>
+  <desc>Fixtures load an in-memory SQLite store. The coverage engine classifies four states and feeds a CLI report, tests and a browser lab. The demo reads 57% reported against 29% true coverage.</desc>
+  <defs>
+    <pattern id="g16" width="16" height="16" patternUnits="userSpaceOnUse">
+      <path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/>
+    </pattern>
+    <pattern id="g80" width="80" height="80" patternUnits="userSpaceOnUse">
+      <path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/>
+    </pattern>
+    <marker id="ar" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+      <polygon points="0,0 8,4 0,8" fill="#EAF3FB" fill-opacity="0.8"/>
+    </marker>
+    <marker id="aa" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto">
+      <polygon points="0,0 8,4 0,8" fill="#9FDBFF"/>
+    </marker>
+    <style>
+      text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:9px;letter-spacing:0.06em;text-transform:uppercase;fill:#EAF3FB}
+      .s{fill-opacity:0.7}
+      .a{fill:#9FDBFF}
+      .t{font-size:10px}
+      .b{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+      .k{fill:none;stroke:#9FDBFF;stroke-width:1}
+      .l{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+      .d{fill:none;stroke:#EAF3FB;stroke-opacity:0.4;stroke-width:1}
+    </style>
+  </defs>
+
+  <rect width="640" height="360" fill="#0D3B66"/>
+  <rect width="640" height="360" fill="url(#g16)"/>
+  <rect width="640" height="360" fill="url(#g80)"/>
+
+  <!-- title strip -->
+  <rect x="16" y="16" width="608" height="24" fill="#0D3B66" class="b"/>
+  <text x="24" y="32" style="font-size:11px">PN-07 · TRACEBOARD · STALE-COVERAGE TRACEABILITY</text>
+
+  <!-- fixtures -->
+  <rect x="16" y="130" width="120" height="50" class="b"/>
+  <text x="24" y="146" class="t">FIXTURES.TS</text>
+  <text x="24" y="160" class="s">PLANTED</text>
+  <text x="24" y="172" class="s">GROUND TRUTH</text>
+
+  <!-- store -->
+  <rect x="176" y="80" width="140" height="150" class="b"/>
+  <text x="184" y="98" class="t">STORE.TS</text>
+  <text x="184" y="110" class="s">IN-MEMORY SQLITE</text>
+  <line x1="176" y1="118" x2="316" y2="118" class="d"/>
+  <text x="184" y="134" class="s">REQUIREMENT</text>
+  <text x="184" y="146" class="a">REQUIREMENT_VERSION</text>
+  <text x="184" y="158" class="s">TEST_CASE</text>
+  <text x="184" y="170" class="s">COVERAGE_LINK</text>
+  <text x="184" y="182" class="s">DEFECT</text>
+  <text x="184" y="194" class="s">CHANGE_REQUEST</text>
+  <line x1="176" y1="204" x2="316" y2="204" class="d"/>
+  <text x="184" y="220" class="a">TRIGGER BLOCKS UPDATE</text>
+
+  <!-- coverage engine -->
+  <rect x="356" y="130" width="120" height="50" class="k"/>
+  <text x="364" y="146" class="t a">COVERAGE.TS</text>
+  <text x="364" y="160" class="s">COVERAGE ENGINE</text>
+  <text x="364" y="172" class="s">FRESHNESS RULE</text>
+
+  <!-- states -->
+  <rect x="356" y="205" width="120" height="80" class="k"/>
+  <text x="364" y="221" class="t">FOUR STATES</text>
+  <line x1="356" y1="227" x2="476" y2="227" class="d"/>
+  <text x="364" y="239" class="s">COVERED</text>
+  <text x="364" y="251" class="a">STALE_COVERED</text>
+  <text x="364" y="263" class="s">FAILING</text>
+  <text x="364" y="275" class="s">UNCOVERED</text>
+
+  <!-- outputs -->
+  <rect x="516" y="60" width="108" height="50" class="b"/>
+  <text x="570" y="80" text-anchor="middle" class="t">DEMO.TS</text>
+  <text x="570" y="94" text-anchor="middle" class="s">CLI REPORT</text>
+
+  <rect x="516" y="130" width="108" height="50" class="b"/>
+  <text x="570" y="150" text-anchor="middle" class="t">TESTS</text>
+  <text x="570" y="164" text-anchor="middle" class="s">COVERAGE.TEST.TS</text>
+
+  <rect x="516" y="200" width="108" height="50" class="b" stroke-dasharray="4 3"/>
+  <text x="570" y="216" text-anchor="middle" class="t">SITE/CORE.MJS</text>
+  <text x="570" y="229" text-anchor="middle" class="s">BROWSER LAB</text>
+  <text x="570" y="241" text-anchor="middle" class="s">(RULES PORTED)</text>
+
+  <!-- arrows: key path -->
+  <path d="M136 155H174" class="k" marker-end="url(#aa)"/>
+  <path d="M316 155H354" class="k" marker-end="url(#aa)"/>
+  <path d="M416 180V203" class="k" marker-end="url(#aa)"/>
+  <path d="M356 274H318" class="k" marker-end="url(#aa)"/>
+
+  <!-- fan-out -->
+  <path d="M476 155H496" class="l"/>
+  <path d="M496 85V225" class="l"/>
+  <path d="M496 85H514" class="l" marker-end="url(#ar)"/>
+  <path d="M496 155H514" class="l" marker-end="url(#ar)"/>
+  <path d="M496 225H514" class="l" stroke-dasharray="4 3" marker-end="url(#ar)"/>
+
+  <!-- readouts -->
+  <text x="16" y="254" class="s">DEMO READOUT</text>
+  <rect x="16" y="262" width="140" height="50" class="b"/>
+  <text x="24" y="278" class="s">SPREADSHEET REPORTS</text>
+  <text x="24" y="800" class="a"></text>
+  <text x="24" y="800"></text>
+  <text x="24" y="300" class="a" style="font-size:11px">57% COVERED</text>
+
+  <rect x="176" y="262" width="140" height="50" class="k"/>
+  <text x="184" y="278" class="s">ACTUALLY TRUE</text>
+  <text x="184" y="300" class="a" style="font-size:11px">29% COVERED</text>
+
+  <text x="16" y="336" class="s">STALE = PASSING TEST ON SUPERSEDED VERSION</text>
+</svg>

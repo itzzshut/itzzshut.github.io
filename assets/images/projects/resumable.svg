@@ -1,0 +1,85 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-08 resumable: SSE resume flow</title>
+<desc>An event source publishes into a bounded ReplayBuffer. A client reconnects with Last-Event-ID into resume(), which returns FRESH or RESUMED events, or a GAP with a missed count and snapshot. StreamClient.apply tracks the result. Readouts: 24,540 events, 1,000 reconnects, 0 lost.</desc>
+<defs>
+<pattern id="mn" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="mj" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="ah" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<marker id="aa" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+<style>
+text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;letter-spacing:0.06em;fill:#EAF3FB;text-transform:uppercase}
+.t{font-size:10px;text-anchor:middle}
+.s{font-size:9px;text-anchor:middle;fill-opacity:0.7}
+.a{fill:#9FDBFF}
+.b{fill:none;stroke:#EAF3FB;stroke-opacity:0.6;stroke-width:1}
+.k{fill:none;stroke:#9FDBFF;stroke-width:1}
+.l{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+</style>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#mn)"/>
+<rect width="640" height="360" fill="url(#mj)"/>
+
+<rect x="16" y="16" width="608" height="20" class="b"/>
+<text x="24" y="30" font-size="10" style="font-size:10px">PN-08 · RESUMABLE · SSE LAST-EVENT-ID RESUME</text>
+<text x="616" y="30" style="font-size:9px;text-anchor:end;fill-opacity:0.7">SCHEMATIC</text>
+
+<rect x="16" y="56" width="120" height="48" class="b"/>
+<text x="76" y="77" class="t">Event source</text>
+<text x="76" y="92" class="s">publish(type, data)</text>
+
+<rect x="220" y="56" width="172" height="48" class="b"/>
+<text x="306" y="77" class="t">ReplayBuffer</text>
+<text x="306" y="92" class="s">bounded, monotonic ids</text>
+
+<rect x="16" y="144" width="120" height="48" class="k"/>
+<text x="76" y="165" class="t">Client reconnect</text>
+<text x="76" y="180" class="s">sends last id</text>
+
+<rect x="220" y="144" width="172" height="48" class="k"/>
+<text x="306" y="165" class="t a">resume(lastEventId)</text>
+<text x="306" y="180" class="s">pure fn of buffer + id</text>
+
+<path d="M136 80H218" class="l" marker-end="url(#ah)"/>
+<text x="177" y="74" class="s">publish</text>
+<path d="M306 104V142" class="l" marker-end="url(#ah)"/>
+<text x="314" y="128" style="font-size:9px;fill-opacity:0.7">reads</text>
+<path d="M136 168H218" class="k" marker-end="url(#aa)"/>
+<text x="177" y="162" class="s a" style="fill-opacity:1">Last-Event-ID</text>
+
+<path d="M306 192V212H220V230" class="l" marker-end="url(#ah)"/>
+<path d="M306 212H420V230" class="k" marker-end="url(#aa)"/>
+
+<rect x="132" y="232" width="176" height="48" class="b"/>
+<text x="220" y="253" class="t">FRESH / RESUMED</text>
+<text x="220" y="268" class="s">events since id+1</text>
+
+<rect x="332" y="232" width="176" height="48" class="k"/>
+<text x="420" y="253" class="t a">GAP</text>
+<text x="420" y="268" class="s">missed count + snapshotAt</text>
+
+<path d="M220 280V298" class="l" marker-end="url(#ah)"/>
+<path d="M420 280V298" class="k" marker-end="url(#aa)"/>
+
+<rect x="180" y="300" width="260" height="44" class="k"/>
+<text x="310" y="319" class="t a">StreamClient.apply</text>
+<text x="310" y="333" class="s">rebase to snapshot after gap</text>
+
+<path d="M440 322H462" class="k" marker-end="url(#aa)"/>
+<rect x="464" y="300" width="160" height="44" class="b"/>
+<text x="544" y="314" class="t">Client state</text>
+<text x="544" y="325" class="s">lastEventId, received,</text>
+<text x="544" y="336" class="s">gaps, missedTotal</text>
+
+<rect x="452" y="56" width="172" height="32" class="b"/>
+<text x="462" y="76" style="font-size:11px" class="a">24,540</text>
+<text x="518" y="76" style="font-size:9px;fill-opacity:0.7">events published</text>
+
+<rect x="452" y="100" width="172" height="32" class="b"/>
+<text x="462" y="120" style="font-size:11px" class="a">1,000</text>
+<text x="518" y="120" style="font-size:9px;fill-opacity:0.7">reconnects</text>
+
+<rect x="452" y="144" width="172" height="32" class="k"/>
+<text x="462" y="164" style="font-size:11px" class="a">0</text>
+<text x="518" y="164" style="font-size:9px;fill-opacity:0.7">events lost</text>
+</svg>

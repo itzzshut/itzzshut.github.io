@@ -1,0 +1,38 @@
+{
+  "paragraphs": [
+    "I'm a full-stack developer who likes owning a feature from the database schema to the last React component. My everyday stack is React, Next.js, Node.js, Express, Bun and Hono, with MongoDB, PostgreSQL and Redis underneath.",
+    "At Louisa AI I worked on an internal release automation platform, taking its GitHub integration phase end to end: backend services, database models, webhooks, APIs for running and monitoring GitHub workflows, and Slack notifications for approvals and failures.",
+    "Outside work I build full-stack products such as an AI career coach on Next.js, Clerk, Prisma and Google Gemini, and a MERN e-commerce store with Stripe payments, Redis caching and an admin dashboard.",
+    "I studied Computer Science and Engineering at Jadavpur University, have solved 800+ DSA problems across platforms, and serve as a CodeClub member and GFM Coordinator."
+  ],
+  "highlights": [
+    {
+      "label": "Discipline",
+      "value": "Full-stack development"
+    },
+    {
+      "label": "Most recent role",
+      "value": "Software Engineer Intern, Louisa AI"
+    },
+    {
+      "label": "Degree",
+      "value": "B.E. Computer Science and Engineering, Jadavpur University"
+    },
+    {
+      "label": "Core stack",
+      "value": "React, Next.js, Node.js, Hono, Bun"
+    },
+    {
+      "label": "Data",
+      "value": "MongoDB, PostgreSQL, Redis"
+    },
+    {
+      "label": "Problem solving",
+      "value": "800+ DSA problems solved"
+    },
+    {
+      "label": "Community",
+      "value": "CodeClub member and GFM Coordinator"
+    }
+  ]
+}

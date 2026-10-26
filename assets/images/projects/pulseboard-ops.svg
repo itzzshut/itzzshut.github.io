@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-labelledby="ttl dsc">
+<title id="ttl">PN-05 pulseboard-ops architecture</title>
+<desc id="dsc">Stripe, GitHub, generic JSON webhooks and a custom SDK pass through signature verification and a Redis rate limiter into a MongoDB rule engine (pattern, threshold, spike). Events and alerts go to a Socket.IO multi-tenant React dashboard, and alerts go to Slack and email.</desc>
+<defs>
+<pattern id="gm" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="gM" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="aa" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+<marker id="ab" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<style>
+.t{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:9px;letter-spacing:0.06em;fill:#EAF3FB}
+.s{fill-opacity:0.7}
+.a{fill:#9FDBFF}
+.h{font-size:11px}
+.m{text-anchor:middle}
+.b{fill:#0D3B66;stroke:#EAF3FB;stroke-opacity:0.8;stroke-width:1}
+.g{fill:none;stroke:#EAF3FB;stroke-opacity:0.4;stroke-width:1;stroke-dasharray:4 3}
+.k{fill:none;stroke:#9FDBFF;stroke-width:1}
+.c{fill:none;stroke:#EAF3FB;stroke-opacity:0.7;stroke-width:1}
+</style>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#gm)"/>
+<rect width="640" height="360" fill="url(#gM)"/>
+
+<rect x="16" y="16" width="608" height="20" fill="none" stroke="#EAF3FB" stroke-opacity="0.8"/>
+<text class="t h" x="24" y="30">PN-05 · PULSEBOARD-OPS · WEBHOOK INCIDENT RADAR</text>
+<text class="t s" x="616" y="30" text-anchor="end">SHEET 1/1</text>
+
+<text class="t s" x="16" y="60">EXTERNAL</text>
+<rect class="b" x="16" y="68" width="96" height="34"/>
+<rect class="b" x="16" y="112" width="96" height="34"/>
+<rect class="b" x="16" y="156" width="96" height="34"/>
+<rect class="b" x="16" y="200" width="96" height="34"/>
+<text class="t m" x="64" y="82">STRIPE</text><text class="t m s" x="64" y="95">WEBHOOK</text>
+<text class="t m" x="64" y="126">GITHUB</text><text class="t m s" x="64" y="139">WEBHOOK</text>
+<text class="t m" x="64" y="170">GENERIC JSON</text><text class="t m s" x="64" y="183">WEBHOOK</text>
+<text class="t m" x="64" y="214">CUSTOM SDK</text><text class="t m s" x="64" y="227">SDK CLIENT</text>
+
+<path class="k" d="M112 85H124M112 129H124M112 173H124M112 217H124M124 85V217"/>
+<path class="k" d="M124 173H142" marker-end="url(#aa)"/>
+
+<rect class="g" x="132" y="48" width="170" height="216"/>
+<text class="t s" x="140" y="60">INGESTION API · EXPRESS</text>
+<rect class="b" x="142" y="145" width="66" height="56"/>
+<text class="t m" x="175" y="170">SIGNATURE</text><text class="t m" x="175" y="183">VERIFY</text>
+<path class="k" d="M208 173H226" marker-end="url(#aa)"/>
+<rect class="b" x="226" y="145" width="66" height="56"/>
+<text class="t m s" x="259" y="162">REDIS</text><text class="t m" x="259" y="175">RATE</text><text class="t m" x="259" y="188">LIMIT</text>
+
+<path class="k" d="M292 173H307V103H336" marker-end="url(#aa)"/>
+
+<rect class="g" x="322" y="48" width="150" height="216"/>
+<text class="t s" x="330" y="60">RULE ENGINE</text>
+<path class="b" d="M336 86V120A61 8 0 0 0 458 120V86"/>
+<ellipse class="b" cx="397" cy="86" rx="61" ry="8"/>
+<text class="t m" x="397" y="104">MONGODB</text>
+<text class="t m s" x="397" y="117">RULES + EVENTS</text>
+<path class="k" d="M397 128V152" marker-end="url(#aa)"/>
+<rect class="b" x="336" y="152" width="122" height="96"/>
+<text class="t m a" x="397" y="168">EVALUATION</text>
+<line class="c" x1="346" y1="176" x2="448" y2="176"/>
+<text class="t m" x="397" y="194">PATTERN</text>
+<text class="t m" x="397" y="214">THRESHOLD</text>
+<text class="t m" x="397" y="234">SPIKE</text>
+
+<path class="c" d="M482 200V245H504M482 217H504" marker-end="url(#ab)"/>
+<path class="c" d="M482 217H504" marker-end="url(#ab)"/>
+<path class="k" d="M458 200H482V87H504" marker-end="url(#aa)"/>
+
+<rect class="g" x="492" y="48" width="132" height="122"/>
+<text class="t s" x="500" y="60">REAL-TIME DASHBOARD</text>
+<rect class="b" x="504" y="70" width="108" height="34"/>
+<text class="t m" x="558" y="85">SOCKET.IO</text><text class="t m s" x="558" y="97">PUSH</text>
+<path class="k" d="M558 104V120" marker-end="url(#aa)"/>
+<rect class="b" x="504" y="120" width="108" height="40"/>
+<text class="t m a" x="558" y="136">MULTI-TENANT</text><text class="t m a" x="558" y="149">REACT DASHBOARD</text>
+
+<rect class="g" x="492" y="184" width="132" height="80"/>
+<text class="t s" x="500" y="196">NOTIFY FAN-OUT</text>
+<rect class="b" x="504" y="206" width="108" height="22"/>
+<text class="t m" x="558" y="221">SLACK</text>
+<rect class="b" x="504" y="234" width="108" height="22"/>
+<text class="t m" x="558" y="249">EMAIL</text>
+
+<rect class="b" x="16" y="280" width="150" height="30"/>
+<text class="t h a" x="26" y="299">4</text><text class="t" x="42" y="299">INGEST PATHS</text>
+<rect class="b" x="176" y="280" width="150" height="30"/>
+<text class="t h a" x="186" y="299">3</text><text class="t" x="202" y="299">RULE TYPES</text>
+<rect class="b" x="336" y="280" width="150" height="30"/>
+<text class="t h a" x="346" y="299">2</text><text class="t" x="362" y="299">NOTIFY CHANNELS</text>
+
+<line class="k" x1="500" y1="287" x2="524" y2="287"/>
+<text class="t s" x="530" y="290">KEY PATH</text>
+<line class="c" x1="500" y1="303" x2="524" y2="303"/>
+<text class="t s" x="530" y="306">FAN-OUT</text>
+
+<text class="t s" x="16" y="338">ALL QUERIES SCOPED TO ORGANIZATIONID · JWT OWNER/ADMIN/MEMBER</text>
+</svg>

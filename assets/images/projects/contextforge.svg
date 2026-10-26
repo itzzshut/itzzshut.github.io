@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360">
+<title>PN-04 contextforge schematic</title>
+<desc>Blueprint of contextforge: ingestion of Markdown, PDF and URL into section-aware chunks, embeddings and a vector store; the ask path embeds the query, searches top-k, checks a 0.215 confidence threshold, generates a cited answer, checks citations, and otherwise abstains to an admin queue.</desc>
+<defs>
+<pattern id="gm" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="gM" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="ar" viewBox="0 0 8 8" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<marker id="aa" viewBox="0 0 8 8" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto" markerUnits="userSpaceOnUse"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+<style>
+text{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:9px;letter-spacing:0.06em;text-transform:uppercase;fill:#EAF3FB}
+.s{opacity:0.7}
+.c{text-anchor:middle}
+.k{fill:#9FDBFF}
+.b{fill:#0D3B66;stroke:#EAF3FB;stroke-opacity:0.75;stroke-width:1}
+.a{fill:none;stroke:#9FDBFF;stroke-width:1}
+.l{fill:none;stroke:#EAF3FB;stroke-opacity:0.6;stroke-width:1}
+.d{fill:none;stroke:#EAF3FB;stroke-opacity:0.6;stroke-width:1;stroke-dasharray:4 3}
+</style>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#gm)"/>
+<rect width="640" height="360" fill="url(#gM)"/>
+
+<rect x="16" y="16" width="608" height="20" class="b" fill-opacity="0"/>
+<text x="24" y="30" style="font-size:10px">PN-04 · CONTEXTFORGE · CITED DOCS ANSWER BOT</text>
+<text x="616" y="30" class="s" style="text-anchor:end">RAG · ABSTAINS WHEN UNSURE</text>
+
+<text x="16" y="58" class="s">Ingestion</text>
+<rect x="16" y="68" width="100" height="42" class="b"/>
+<rect x="143" y="68" width="100" height="42" class="b"/>
+<rect x="270" y="68" width="100" height="42" class="b"/>
+<rect x="397" y="68" width="100" height="42" class="b"/>
+<text x="66" y="87" class="c">Sources</text><text x="66" y="envy" class="c"></text>
+<text x="66" y="100" class="c s">MD · PDF · URL</text>
+<text x="193" y="87" class="c">Normalize</text>
+<text x="193" y="100" class="c s">to plain text</text>
+<text x="320" y="87" class="c">Section chunks</text>
+<text x="320" y="100" class="c s">overlap if long</text>
+<text x="447" y="87" class="c">Embed</text>
+<text x="447" y="100" class="c s">each chunk</text>
+<path d="M524 74V104A50 6 0 0 0 624 104V74" class="b"/>
+<ellipse cx="574" cy="74" rx="50" ry="6" class="b"/>
+<text x="574" y="92" class="c">Vector store</text>
+<text x="574" y="102" class="c s" style="font-size:8px">pgvector / memory</text>
+<line x1="116" y1="89" x2="143" y2="89" class="l" marker-end="url(#ar)"/>
+<line x1="243" y1="89" x2="270" y2="89" class="l" marker-end="url(#ar)"/>
+<line x1="370" y1="89" x2="397" y2="89" class="l" marker-end="url(#ar)"/>
+<line x1="497" y1="89" x2="524" y2="89" class="l" marker-end="url(#ar)"/>
+
+<text x="16" y="158" class="s">Ask</text>
+<polyline points="268,170 268,140 574,140 574,111" class="l" marker-end="url(#ar)"/>
+<text x="300" y="135" class="s">Similarity search</text>
+
+<rect x="18" y="170" width="80" height="40" class="b"/>
+<rect x="123" y="170" width="80" height="40" class="b"/>
+<rect x="228" y="170" width="80" height="40" class="b"/>
+<polygon points="343,170 403,170 413,190 403,210 343,210 333,190" class="b"/>
+<rect x="438" y="170" width="80" height="40" class="b"/>
+<polygon points="553,170 613,170 623,190 613,210 553,210 543,190" class="b"/>
+<text x="58" y="188" class="c">User</text><text x="58" y="199" class="c">question</text>
+<text x="163" y="188" class="c">Embed</text><text x="163" y="199" class="c">query</text>
+<text x="268" y="188" class="c">Top-k</text><text x="268" y="199" class="c">search</text>
+<text x="373" y="188" class="c">Score ≥</text><text x="373" y="200" class="c k" style="font-size:11px">0.215?</text>
+<text x="478" y="188" class="c">Generate</text><text x="478" y="199" class="c">cited answer</text>
+<text x="583" y="188" class="c">Citation</text><text x="583" y="199" class="c">check</text>
+
+<line x1="98" y1="190" x2="123" y2="190" class="a" marker-end="url(#aa)"/>
+<line x1="203" y1="190" x2="228" y2="190" class="a" marker-end="url(#aa)"/>
+<line x1="308" y1="190" x2="333" y2="190" class="a" marker-end="url(#aa)"/>
+<line x1="413" y1="190" x2="438" y2="190" class="a" marker-end="url(#aa)"/>
+<line x1="518" y1="190" x2="543" y2="190" class="a" marker-end="url(#aa)"/>
+<text x="425" y="186" class="c k" style="font-size:8px;letter-spacing:0">YES</text>
+
+<polyline points="563,210 563,231 373,231" class="d"/>
+<line x1="373" y1="210" x2="373" y2="252" class="d" marker-end="url(#ar)"/>
+<text x="470" y="226" class="c s">No</text>
+<text x="379" y="246" class="s">No</text>
+<line x1="603" y1="210" x2="603" y2="252" class="a" marker-end="url(#aa)"/>
+<text x="609" y="228" class="k">Yes</text>
+
+<rect x="333" y="252" width="80" height="40" class="b"/>
+<text x="373" y="269" class="c">Abstain</text><text x="373" y="280" class="c s">and log</text>
+<rect x="228" y="252" width="80" height="40" class="b"/>
+<text x="268" y="269" class="c">Admin queue</text><text x="268" y="280" class="c s">/admin</text>
+<line x1="333" y1="272" x2="308" y2="272" class="d" marker-end="url(#ar)"/>
+<rect x="543" y="252" width="80" height="40" class="b" style="stroke:#9FDBFF"/>
+<text x="583" y="269" class="c">Streamed</text><text x="583" y="280" class="c s">+ citations</text>
+
+<text x="18" y="262" class="s">Swappable by env:</text>
+<text x="18" y="274" class="s">embed · answer · store</text>
+<text x="18" y="286" class="s">default: offline</text>
+
+<rect x="16" y="308" width="150" height="32" class="b"/>
+<text x="24" y="320" class="s">Confidence threshold</text>
+<text x="24" y="334" class="k" style="font-size:11px">0.215</text>
+<rect x="176" y="308" width="150" height="32" class="b"/>
+<text x="184" y="320" class="s">Golden eval set</text>
+<text x="184" y="334" class="k" style="font-size:11px">30 cases</text>
+<text x="338" y="320" class="s">Eval harness reports:</text>
+<text x="338" y="334" class="s">accuracy + hallucination rate</text>
+</svg>

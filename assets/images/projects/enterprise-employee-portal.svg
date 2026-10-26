@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img">
+<title>PN-06 · Enterprise Employee Portal · System schematic</title>
+<desc>Four roles use an Angular 18 SPA served by nginx. It calls an Express API on Node.js 22 with a middleware pipeline and domain services. The API stores data in MySQL 8.0 and object storage. A Jenkins pipeline with SonarQube and Newman gates deploys the system.</desc>
+<defs>
+<pattern id="gm" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#EAF3FB" stroke-opacity="0.05" stroke-width="1"/></pattern>
+<pattern id="gM" width="80" height="80" patternUnits="userSpaceOnUse"><path d="M80 0H0V80" fill="none" stroke="#EAF3FB" stroke-opacity="0.09" stroke-width="1"/></pattern>
+<marker id="a" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#EAF3FB" fill-opacity="0.8"/></marker>
+<marker id="k" viewBox="0 0 8 8" refX="7" refY="4" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L8 4L0 8z" fill="#9FDBFF"/></marker>
+<style>
+.t{font-family:"IBM Plex Mono",SFMono-Regular,Consolas,monospace;font-size:9px;letter-spacing:.06em;fill:#EAF3FB}
+.s{fill-opacity:.7}
+.m{text-anchor:middle}
+.k{fill:#9FDBFF}
+.b{fill:#0D3B66;stroke:#EAF3FB;stroke-opacity:.6;stroke-width:1}
+.c{fill:none;stroke:#EAF3FB;stroke-opacity:.45;stroke-width:1}
+.ka{fill:#0D3B66;stroke:#9FDBFF;stroke-width:1}
+.l{fill:none;stroke:#EAF3FB;stroke-opacity:.6;stroke-width:1}
+.kl{fill:none;stroke:#9FDBFF;stroke-width:1}
+</style>
+</defs>
+<rect width="640" height="360" fill="#0D3B66"/>
+<rect width="640" height="360" fill="url(#gm)"/>
+<rect width="640" height="360" fill="url(#gM)"/>
+
+<rect class="c" x="16" y="16" width="608" height="20"/>
+<text class="t" x="24" y="30" style="font-size:10px">PN-06 · ENTERPRISE EMPLOYEE PORTAL · HR SELF-SERVICE SYSTEM SCHEMATIC</text>
+
+<!-- actors -->
+<rect class="c" x="16" y="56" width="96" height="150"/>
+<text class="t s" x="24" y="72">ACTORS</text>
+<rect class="b" x="24" y="84" width="80" height="20"/><text class="t m" x="64" y="97">EMPLOYEE</text>
+<rect class="b" x="24" y="110" width="80" height="20"/><text class="t m" x="64" y="123">MANAGER</text>
+<rect class="b" x="24" y="136" width="80" height="20"/><text class="t m" x="64" y="149">HR_ADMIN</text>
+<rect class="b" x="24" y="162" width="80" height="20"/><text class="t m" x="64" y="175">SUPER_ADMIN</text>
+
+<!-- edge -->
+<rect class="c" x="140" y="56" width="104" height="150"/>
+<text class="t s" x="148" y="72">EDGE</text>
+<rect class="b" x="148" y="84" width="88" height="40"/>
+<text class="t m" x="192" y="101">NGINX</text><text class="t s m" x="192" y="114">STATIC HOST</text>
+<rect class="b" x="148" y="138" width="88" height="56"/>
+<text class="t m k" x="192" y="157">ANGULAR 18</text><text class="t m" x="192" y="170">SPA</text><text class="t s m" x="192" y="184">ROLE-AWARE UI</text>
+<line class="l" x1="192" y1="124" x2="192" y2="138" marker-end="url(#a)"/>
+
+<!-- api -->
+<rect class="c" x="272" y="56" width="214" height="150"/>
+<text class="t" x="280" y="72">EXPRESS API · NODE.JS 22</text>
+<text class="t s" x="280" y="92">MIDDLEWARE PIPELINE</text>
+<line class="l" x1="302" y1="111" x2="455" y2="111"/>
+<rect class="b" x="280" y="98" width="44" height="26"/><text class="t m" x="302" y="114">JWT</text>
+<rect class="b" x="331" y="98" width="44" height="26"/><text class="t m" x="353" y="114">RBAC</text>
+<rect class="b" x="382" y="98" width="44" height="26"/><text class="t m" x="404" y="114">VALID</text>
+<rect class="b" x="433" y="98" width="44" height="26"/><text class="t m" x="455" y="114">AUDIT</text>
+<line class="kl" x1="455" y1="124" x2="455" y2="150" marker-end="url(#k)"/>
+<text class="t s" x="280" y="144">DOMAIN SERVICES</text>
+<rect class="ka" x="280" y="150" width="44" height="26"/><text class="t m" x="302" y="166">LEAVE</text>
+<rect class="b" x="331" y="150" width="44" height="26"/><text class="t m" x="353" y="166">TIME</text>
+<rect class="b" x="382" y="150" width="44" height="26"/><text class="t m" x="404" y="166">DOCS</text>
+<rect class="b" x="433" y="150" width="44" height="26"/><text class="t m" x="455" y="166">ORG</text>
+<text class="t s" x="280" y="195">RULES ENFORCED IN TX</text>
+
+<!-- data -->
+<rect class="c" x="514" y="56" width="110" height="150"/>
+<text class="t s" x="522" y="72">DATA</text>
+<rect class="ka" x="522" y="86" width="94" height="54"/>
+<ellipse class="ka" cx="569" cy="86" rx="47" ry="5"/>
+<text class="t m k" x="569" y="108">MYSQL 8.0</text><text class="t s m" x="569" y="122">ORG CTE</text>
+<rect class="b" x="522" y="152" width="94" height="44"/>
+<text class="t m" x="569" y="171">OBJECT</text><text class="t m" x="569" y="184">STORAGE</text>
+
+<!-- main arrows -->
+<line class="kl" x1="112" y1="131" x2="140" y2="131" marker-end="url(#k)"/>
+<line class="kl" x1="244" y1="131" x2="272" y2="131" marker-end="url(#k)"/>
+<polyline class="kl" points="486,112 500,112 500,113 514,113" marker-end="url(#k)"/>
+<line class="l" x1="486" y1="174" x2="514" y2="174" marker-end="url(#a)"/>
+
+<!-- readouts -->
+<rect class="ka" x="16" y="214" width="96" height="22"/>
+<text class="t m" x="64" y="228"><tspan class="k">4</tspan> ROLES</text>
+<rect class="ka" x="279" y="214" width="200" height="22"/>
+<text class="t m" x="379" y="228"><tspan class="k">2</tspan>-STAGE LEAVE APPROVAL</text>
+<rect class="ka" x="514" y="214" width="110" height="22"/>
+<text class="t m" x="569" y="228"><tspan class="k">15</tspan> TABLES</text>
+
+<!-- ci/cd -->
+<rect class="c" x="16" y="248" width="608" height="96"/>
+<text class="t k" x="32" y="264">JENKINS PIPELINE</text>
+<rect class="b" x="32" y="276" width="96" height="34"/><text class="t m" x="80" y="296">GIT PUSH</text>
+<rect class="b" x="152" y="276" width="96" height="34"/><text class="t m" x="200" y="296">BUILD + TEST</text>
+<rect class="ka" x="272" y="276" width="96" height="34"/><text class="t m k" x="320" y="296">SONARQUBE</text>
+<rect class="ka" x="392" y="276" width="96" height="34"/><text class="t m k" x="440" y="296">NEWMAN</text>
+<rect class="b" x="512" y="276" width="96" height="34"/><text class="t m" x="560" y="296">DEPLOY</text>
+<line class="l" x1="128" y1="293" x2="152" y2="293" marker-end="url(#a)"/>
+<line class="kl" x1="248" y1="293" x2="272" y2="293" marker-end="url(#k)"/>
+<line class="kl" x1="368" y1="293" x2="392" y2="293" marker-end="url(#k)"/>
+<line class="kl" x1="488" y1="293" x2="512" y2="293" marker-end="url(#k)"/>
+<text class="t s m" x="320" y="326">QUALITY GATE</text>
+<text class="t s m" x="440" y="326">CONTRACT GATE</text>
+<text class="t s m" x="560" y="326">PRODUCTION</text>
+</svg>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://itzzshut.github.io/sitemap.xml
